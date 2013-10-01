@@ -1,4 +1,4 @@
 sokoban
 =======
 
-Sokoban
+Sokoban game. This is my small course project.
