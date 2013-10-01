@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SokonbanWindow</class>
+ <widget class="QMainWindow" name="SokonbanWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="game_menu">
+    <property name="title">
+     <string>游戏</string>
+    </property>
+    <addaction name="newgame_action"/>
+    <addaction name="separator"/>
+    <addaction name="option_action"/>
+    <addaction name="map_action"/>
+    <addaction name="separator"/>
+    <addaction name="exit_action"/>
+   </widget>
+   <widget class="QMenu" name="help_menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="sokonban_action"/>
+    <addaction name="author_action"/>
+   </widget>
+   <addaction name="game_menu"/>
+   <addaction name="help_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="newgame_action">
+   <property name="text">
+    <string>新游戏</string>
+   </property>
+  </action>
+  <action name="option_action">
+   <property name="text">
+    <string>选关</string>
+   </property>
+  </action>
+  <action name="map_action">
+   <property name="text">
+    <string>地图编辑器</string>
+   </property>
+  </action>
+  <action name="exit_action">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="sokonban_action">
+   <property name="text">
+    <string>关于推箱子</string>
+   </property>
+  </action>
+  <action name="author_action">
+   <property name="text">
+    <string>关于作者</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exit_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>newgame_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>newGameSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>option_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>chooseLevel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sokonban_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>aboutSokoban()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>author_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>aboutAuthor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>map_action</sender>
+   <signal>activated()</signal>
+   <receiver>SokonbanWindow</receiver>
+   <slot>mapEditor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>newGameSlot()</slot>
+  <slot>chooseLevel()</slot>
+  <slot>aboutSokoban()</slot>
+  <slot>aboutAuthor()</slot>
+  <slot>mapEditor()</slot>
+ </slots>
+</ui>
